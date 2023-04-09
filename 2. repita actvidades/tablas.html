@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TABLAS DE MULTIPLICAR</h1>
+    <script>
+        function imp(lee){
+            document.writeln(lee + "<br><br>");
+        }
+        var num1 = parseInt(prompt("ingrese numero de tabla que quiere hacer: "));
+        var terminar = 10;
+        // var valor = 1;
+
+        // while (valor <= limite){
+        //     imp(`la tabla del ${tabla} por ${valor} es: `)
+        //     let res = tabla * valor;
+        //     imp(res);
+        //     valor = valor + 1;
+        // }
+
+        for(var num2 = 1; num2 <= terminar; num2++){
+            imp(`${num1} por ${num2} es: `);
+            resultado = num2 * num1;
+            imp(resultado);
+        }
+    </script>
+</body>
+</html>

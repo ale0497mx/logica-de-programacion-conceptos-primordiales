@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calcular la media de las edades de una familia</h1>
+    <script>
+        function imp(lee){
+            document.writeln(lee + "<br><br>");
+        }
+        var edadPadre = parseInt(prompt("cual es la edad del papá: ")); 
+        var edadMama = parseInt(prompt("cual es la edad de la mamá: ")); 
+        var canthijos = parseInt(prompt("cuantos hijos tienes: ")); 
+        var contador = 1;
+        // while( contador <= canthijos ){
+        //     var cantidadDeHombres = parseInt(prompt(`cuantos son hombres: `));
+        //     contador++;
+        // }
+        // for(var i=1; i <= canthijos; i++){
+        // var cantidadDeHombres = parseInt(prompt(`cuantos son hombres: `));
+        
+        // }
+        var cantidadDeHombres = parseInt(prompt(`cuantos son hombres: `));
+        var edadesHijo = 0;
+        for(var j=1; j <= cantidadDeHombres; j++){
+                edadesHijo = parseInt(prompt(`cual es la edad del hijo ${j}: `));
+            }
+        var cantidadDeMujeres = parseInt(prompt(`cuantas son mujeres: `));
+        var edadesHija = 0;
+            for(var k=1; k <= cantidadDeMujeres; k++){
+                var edadesHija = parseInt(prompt(`cual es la edad del Hija ${k}: `));
+            }
+        // 42 38 15 12
+42
+        var totEdad = edadPadre + edadMama + edadesHijo + edadesHija;
+        var mediaEdad = totEdad / 4;
+        // sumaHijos = ; 4
+        if(canthijos > cantidadDeHombres + cantidadDeMujeres){
+            alert("exede el numer de hijos");
+        }else{
+            alert("La suma de las edades es: " + totEdad + " y la media es: " + mediaEdad);
+        }
+
+        // imp("La meda de edad es de: " + mediaEdad);
+    </script>
+</body>
+</html>

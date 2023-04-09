@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Año mundial de la fifa</h1>
+    <script>
+        function imp(lee){
+            document.writeln(lee + "<br>");
+        }
+        var añoMundial = 1930;
+        var limite = parseInt(prompt("ingrese limite para contar:"));
+        while(añoMundial <= limite){
+
+            // if(limite == añoMundial){
+            //     break;
+            // 
+
+            imp("hubo mundial de la fifa en el año: " + añoMundial);
+            añoMundial = añoMundial + 4;
+
+        }
+        imp("fin");
+    </script>
+</body>
+</html>

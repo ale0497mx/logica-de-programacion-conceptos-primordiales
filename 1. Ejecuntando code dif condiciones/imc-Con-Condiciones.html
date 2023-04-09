@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function trunc (x, posiciones = 0) {
+            var s = x.toString()
+            var l = s.length
+            var decimalLength = s.indexOf('.') + 1
+            var numStr = s.substr(0, decimalLength + posiciones)
+            return Number(numStr)
+        }
+        function imc(peso, altura){                                
+            let resultado= peso / (altura * altura);
+            return resultado;
+        }
+
+        let pesoPersona = prompt("introduzca peso en kilos: ")
+        let alturaPersona = prompt("introduzca altura usando 1.00 como refrencia:")
+        let resTOT = imc(pesoPersona, alturaPersona);
+
+
+        document.write("tu IMC es: " + trunc(resTOT,2) + "<br><br>");    
+        // document.write("tu IMC es: " + trunc(res2,2) + "<br>");
+
+        if(resTOT <= 18.5 ){
+            document.write("<b>*******CUDADO POSIBLE DESORDEN ALIMENTICIO******</b> <br>" );
+        }else if(resTOT <= 24.9){
+            document.write("<b>*******Peso normal******</b> <br>" );
+        }else if(resTOT <= 26.9){
+            document.write("<b>*******SOBRE PESO GRADO I ******</b> <br>" );
+        }else if(resTOT <= 28.9){
+            document.write("<b>*******SOBRE PESO GRADO II******</b> <br>" );
+        }else if(resTOT <= 34.99){
+            document.write("<b>*******OBESIDAD TIPO I******</b> <br>" );
+        }else if(resTOT <= 39.99){
+            document.write("<b>*******OBESIDAD TIPO II******</b> <br>" );
+        }else if(resTOT <= 49.99){
+            document.write("<b>*******OBESIDAD TIPO III (MORBIDA)******</b> <br>" );
+        }else if(resTOT >= 50){
+            document.write("<b>*******OBESIDAD TIPO IV (EXTREMA)******</b> <br>" );
+        }
+
+    </script>
+</body>
+</html>
